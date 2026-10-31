@@ -77,6 +77,7 @@ struct Node* deleteNode(struct Node* head,struct Node* del) {
     }
     // free(ptr_del)
     // 删除函数根本不需要这个二级指针。释放节点时，直接使用free(del);
+    // 之前额外声明 target 关键在于是否已经有一个指针保存着待释放节点的地址，以及你是否会在释放前覆盖这个地址。
     free(del);
     return head;
 }
