@@ -60,7 +60,7 @@ while (current->next != NULL){
         current->next = current->next->next;
         free(target);
         return head;
-    }
+    };
     else{
         current  = current->next;
     }
